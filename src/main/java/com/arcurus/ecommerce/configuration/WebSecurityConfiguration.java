@@ -31,6 +31,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 private final JwtRequestFilter jwtRequestFilter;
 
 
+
 private  UserDetailsService jwtService;
   private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
