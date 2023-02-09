@@ -29,7 +29,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 private final JwtRequestFilter jwtRequestFilter;
-
 private  UserDetailsService jwtService;
   private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
