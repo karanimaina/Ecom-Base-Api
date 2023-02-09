@@ -24,8 +24,8 @@
 //public class JwtService implements UserDetailsService {
 //    private final UserRepository userRepository;
 //    private final JwtUtil jwtUtil;
-//    @Lazy
 //    @Autowired
+//    @Lazy
 //    private final AuthenticationManager authenticationManager;
 //    public JwtResponse createJwtToken(JwtRequest jwtRequest)throws  Exception{
 //        String username = jwtRequest.getUsername();
