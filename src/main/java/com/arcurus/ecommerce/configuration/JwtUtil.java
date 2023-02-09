@@ -18,7 +18,6 @@ public class JwtUtil {
 
 
 
-
     private static  final String SECRET_KEY="secret";
     private static  final int TOKEN_VALIDITY=3600*5;
     public String getUserNameFromToken(String token){
