@@ -6,6 +6,7 @@ import com.arcurus.ecommerce.model.Role;
 import com.arcurus.ecommerce.repository.RoleRepository;
 import com.arcurus.ecommerce.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -14,6 +15,7 @@ import java.util.Set;
 @Service
 @RequiredArgsConstructor
 public class EcomService {
+    private final PasswordEncoder passwordEncoder;
     private final RoleRepository roleRepository;
     public final UserRepository userRepository;
 
@@ -34,7 +36,7 @@ public class EcomService {
         adminUser.setUserFirstName("admin");
         adminUser.setUserLastName("admin");
         adminUser.setUsername("admin123");
-        adminUser.setUserPassword("admin@pass");
+        adminUser.setUserPassword(passwordEncoder.encode("admin@pass"));
         Set<Role>adminRoles = new HashSet<>();
         adminRoles.add(adminRole);
         adminUser.setRole(adminRoles);
@@ -44,7 +46,7 @@ public class EcomService {
         user.setUserFirstName("raj");
         user.setUserLastName("sharma");
         user.setUsername("raj123");
-        user.setUserPassword("raj@pass");
+        user.setUserPassword(passwordEncoder.encode("raj@pass"));
         Set<Role>userRoles = new HashSet<>();
         userRoles.add(adminRole);
         user.setRole(userRoles);

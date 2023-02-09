@@ -1,9 +1,10 @@
 package com.arcurus.ecommerce.model;
 
 
-import jakarta.persistence.*;
+
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.Set;
 @Entity
 @AllArgsConstructor
