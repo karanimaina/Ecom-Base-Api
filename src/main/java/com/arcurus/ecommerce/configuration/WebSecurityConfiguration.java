@@ -35,7 +35,6 @@ private  UserDetailsService jwtService;
 
 
 
-
   @Override
   protected  void configure(HttpSecurity httpSecurity) throws Exception{
     httpSecurity.cors();
