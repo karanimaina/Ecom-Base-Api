@@ -33,7 +33,6 @@ private  UserDetailsService jwtService;
   private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
 
-
   @Override
   protected  void configure(HttpSecurity httpSecurity) throws Exception{
     httpSecurity.cors();
